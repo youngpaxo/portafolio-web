@@ -1,0 +1,300 @@
+$color-letra: #fff;
+$color-azul: #213598;
+$color-rojo: #dd0a13;
+
+$smalt-50: #eff5ff;
+$smalt-100: #dbe7fe;
+$smalt-200: #bfd5fe;
+$smalt-300: #93bbfd;
+$smalt-400: #6097fa;
+$smalt-500: #3b71f6;
+$smalt-600: #2551eb;
+$smalt-700: #1d3dd8;
+$smalt-800: #1e33af;
+$smalt-900: #213598;
+$smalt-950: #171f54;
+
+$thunderbird-50: #fff1f2;
+$thunderbird-100: #ffdfe0;
+$thunderbird-200: #ffc4c7;
+$thunderbird-300: #ff9b9f;
+$thunderbird-400: #ff6168;
+$thunderbird-500: #ff3039;
+$thunderbird-600: #f2101a;
+$thunderbird-700: #dd0a13;
+$thunderbird-800: #a80c13;
+$thunderbird-900: #8b1116;
+$thunderbird-950: #4c0306;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'ui sans';
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100%;
+	background: linear-gradient(#120842 0%, #1a1838 100%);
+	color: $color-letra;
+
+}
+
+header {
+	z-index: 100;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h1 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+
+		span {
+			color: $color-rojo;
+		}
+	}
+
+	ul {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+	}
+	li {
+		list-style: none;
+		margin: 0 10px;
+		a {
+			text-decoration: none;
+			color: $color-letra;
+			font-weight: 500;
+			letter-spacing: 1px;
+			padding: 10px;
+			font-size: 1.1rem;
+			span {
+				font-weight: 900;
+				color: $color-rojo;
+			}
+		}
+	}
+}
+
+main {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 250px;
+}
+
+aside {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 1rem;
+
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-items: center;
+
+	ul {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+
+		li {
+			list-style: none;
+			margin: 0 10px;
+			a {
+				
+				text-decoration: none;
+				color: $color-letra;
+				font-weight: 500;
+				letter-spacing: 1px;
+				padding: 10px;
+				font-size: 1.1rem;
+				span {
+					font-weight: 900;
+					color: $color-rojo;
+
+				}
+			}
+		}
+	}
+}
+
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#sobre-mi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+
+	h2 {
+		font-size: 3.5rem;
+
+		span {
+		background: linear-gradient( to right, #fff 0%, $color-rojo 50% , #fff 100%);
+		background-repeat: repeat-x;
+		background-size: 200%;
+		background-clip: text; ;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: gradianteTexto 4.5s linear infinite;
+
+	@keyframes gradianteTexto {
+		0% {
+			background-position: 100% 0;
+		}
+
+		100% {
+			background-position: -100% 0;
+		}
+	}
+		}
+	}
+
+	h3 {
+		font-size: 2.5rem;
+		padding-left: 1rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	img {
+		width: 300px;
+		border-radius: 58% 42% 70% 30% / 51% 67% 33% 49%;
+		border: 5px solid $smalt-500;
+	}
+}
+
+#proyectos {
+
+	h2 {
+		font-size: 3.5rem;
+		span {
+			color: $color-rojo;
+		}
+	}
+
+	#proyectos-container {
+
+		gap: 1rem;
+		display: grid;
+		flex-wrap: wrap;
+		grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+		grid-template-rows: minmax(250px, 1fr) minmax(250px, 1fr);
+
+		a{
+			text-decoration: none;
+			color: $color-letra;
+			position: relative;
+
+			img{
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+			}
+
+
+
+			.overlay {
+				position: absolute;
+				bottom: 0;					
+				left: 0;
+				right: 0;
+				background-color: rgba(0, 0, 0, 0.5);
+				overflow: hidden;
+				width: 100%;
+				padding: 10px;
+			}
+
+			h3 {
+				font-size: 2.5rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+		
+		a:hover {
+			
+			img {
+				rotate: -4deg;
+				scale: 1.05;
+				transition: all 0.5s ease;
+			}
+
+	}
+	}
+}
+
+
+#lenguajes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	#lenguajes-container {
+		display: grid;
+		grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+		gap: 1rem;
+
+		div {
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 200px;
+				height: 200px;
+				border-radius: 10px;
+			}
+
+		}
+
+	}
+
+}
+
+#contacto {
+	ul {
+		display: flex;
+	}
+}

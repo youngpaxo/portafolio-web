@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ui sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(#120842 0%, #1a1838 100%);
+  color: #fff;
+}
+
+header {
+  z-index: 100;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+header h1 span {
+  color: #dd0a13;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+header li {
+  list-style: none;
+  margin: 0 10px;
+}
+header li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+header li a span {
+  font-weight: 900;
+  color: #dd0a13;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 250px;
+}
+
+aside {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+aside ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+aside ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+aside ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+aside ul li a span {
+  font-weight: 900;
+  color: #dd0a13;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sobre-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+#sobre-mi h2 {
+  font-size: 3.5rem;
+}
+#sobre-mi h2 span {
+  background: linear-gradient(to right, #fff 0%, #dd0a13 50%, #fff 100%);
+  background-repeat: repeat-x;
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradianteTexto 4.5s linear infinite;
+}
+@keyframes gradianteTexto {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+#sobre-mi h3 {
+  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+#sobre-mi p {
+  font-size: 1.2rem;
+}
+#sobre-mi img {
+  width: 300px;
+  border-radius: 58% 42% 70% 30%/51% 67% 33% 49%;
+  border: 5px solid #3b71f6;
+}
+
+#proyectos h2 {
+  font-size: 3.5rem;
+}
+#proyectos h2 span {
+  color: #dd0a13;
+}
+#proyectos #proyectos-container {
+  gap: 1rem;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+  grid-template-rows: minmax(250px, 1fr) minmax(250px, 1fr);
+}
+#proyectos #proyectos-container a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+#proyectos #proyectos-container a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#proyectos #proyectos-container a .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+}
+#proyectos #proyectos-container a h3 {
+  font-size: 2.5rem;
+}
+#proyectos #proyectos-container a p {
+  font-size: 1.2rem;
+}
+#proyectos #proyectos-container a:hover img {
+  rotate: -4deg;
+  scale: 1.05;
+  transition: all 0.5s ease;
+}
+
+#lenguajes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#lenguajes h2 {
+  font-size: 3.5rem;
+}
+#lenguajes p {
+  font-size: 1.2rem;
+}
+#lenguajes #lenguajes-container {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+  gap: 1rem;
+}
+#lenguajes #lenguajes-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#lenguajes #lenguajes-container div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+#contacto ul {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
